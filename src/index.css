@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+  .showUp-enter-active,
+  .showUp-leave-active {
+    transition: all 0.2s;
+  }
+
+  .showUp-enter-from,
+  .showUp-leave-to {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  body::-webkit-scrollbar {
+    width: 0.5em;
+    @apply bg-red-500;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: black;
+    @apply rounded-full;
+  }
+}
